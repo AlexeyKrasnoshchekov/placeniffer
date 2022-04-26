@@ -30,8 +30,16 @@ input:focus {
 
 /* App Styles */
 
-.App {
+.HomePage {
   font-family: 'Work Sans', sans-serif;
+  max-height: 100vh;
+}
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+  margin: 1rem 0;
 }
 
 h1 {

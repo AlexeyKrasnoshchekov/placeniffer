@@ -59,15 +59,19 @@
   
   .SearchBar-submit {
     text-align: center;
+    display: flex;
+    justify-content: center;
   }
   
-  .SearchBar-submit a {
+  .SearchBar-submit div {
     border-radius: 4px;
+    width: 5rem;
     padding: .72rem 1.7rem;
     background-color: #cca353;
     color: #ffffff;
     font-weight: 600;
     transition: background-color .5s;
+    cursor: pointer;
   }
   
   .SearchBar-submit a:hover {
