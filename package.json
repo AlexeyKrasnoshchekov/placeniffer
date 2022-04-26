@@ -1,13 +1,22 @@
 {
-  "name": "react-secret-keys",
+  "homepage": "https://alexburnitdown.github.io/ravenous-react-app/",
+  "name": "react-recipe-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-google-maps/api": "^2.10.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "node-fetch": "^3.2.3",
+    "node-fetch-commonjs": "^3.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2",
     "whatwg-fetch": "^3.6.2"
@@ -16,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -37,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "dotenv": "^16.0.0",
     "gh-pages": "^2.0.1"
   }
 }
