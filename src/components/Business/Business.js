@@ -8,36 +8,36 @@ class Business extends React.Component {
     return (
       <div className="Business">
         <div className="image-container">
-          <img src={this.props.business.imageSrc} alt="" />
+          <img src={this.props.place.image_url} alt="" />
         </div>
-        <Link to={`/business/${this.props.business.id}`}>
-          <h2>{this.props.business.name}</h2>
+        <Link to={`/business/${this.props.place.id}`}>
+          <h2>{this.props.place.name}</h2>
         </Link>
         <div className="Business-information">
           <div className="Business-information-top">
             <div style={{ display: "flex", color: "green" }}>
-              <span>{this.props.business.rating}</span>
+              <span>{this.props.place.rating}</span>
               <span>
                 <AiFillStar />
               </span>
             </div>
             <span>
-              {this.props.business.reviewCount} <b>reviews</b>
+              {this.props.place.review_count} <b>reviews</b>
             </span>
           </div>
           <div className="Business-address">
             <p>
-              <b>category:</b> {this.props.business.category}
+              <b>category:</b> {this.props.place.category}
             </p>
             <p>
-              <b>address:</b> {this.props.business.address}
+              <b>address:</b> {this.props.place.address}
             </p>
             <p>
-              <b>city:</b> {this.props.business.city}
+              <b>city:</b> {this.props.place.city}
             </p>
             <p>
-              <b>state:</b> {this.props.business.state}{" "}
-              {this.props.business.zipcode}
+              <b>state:</b> {this.props.place.state}{" "}
+              {this.props.place.zipcode}
             </p>
           </div>
           {/* <div className="Business-reviews">

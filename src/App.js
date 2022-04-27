@@ -2,10 +2,13 @@ import React from "react";
 import Home from "./pages/Home/Home";
 import BusinessPage from "./pages/BusinessPage/BusinessPage";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// Import Context
+import State from "./context/state";
 
 function App() {
   return (
-    <Router>
+    <State>
+      <Router>
         <Switch>
           <Route path="/business/:id">
             <BusinessPage />
@@ -14,7 +17,8 @@ function App() {
             <Home />
           </Route>
         </Switch>
-    </Router>
+      </Router>
+    </State>
   );
 }
 

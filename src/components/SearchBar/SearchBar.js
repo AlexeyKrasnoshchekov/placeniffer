@@ -1,103 +1,134 @@
-import React from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { createRef } from "react/cjs/react.production.min";
 import "./SearchBar.css";
+import context from "../../context/context";
 
-class SearchBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      sortBy: "best_match",
-    };
-    this.businessTypeInput = createRef();
-    this.businessLocationInput = createRef();
+export default function SearchBar() {
+  // const [sortBy, setSortBy] = useState("best_match");
+  const initialRender = useRef(true);
+  const {
+    sortBy,
+    setSortBy,
+    term,
+    setTerm,
+    location,
+    setLocation,
+    setError,
+    getPlaces,
+  } = useContext(context);
 
-    this.handleSearch = this.handleSearch.bind(this);
+  let businessTypeInput = createRef();
+  let businessLocationInput = createRef();
 
-    this.sortByOptions = {
-      BestMatch: "best_match",
-      HighestRated: "rating",
-      MostReviewed: "review_count",
-    };
-  }
+  let sortByOptions = {
+    BestMatch: "best_match",
+    HighestRated: "rating",
+    MostReviewed: "review_count",
+  };
 
-  getSortByClass(sortByOption) {
-    return this.state.sortBy === sortByOption ? "active" : "";
-  }
-
-  handleSortByChange(sortByOption) {
-    this.setState({
-      sortBy: sortByOption,
-    });
-    // this.props.setSortBy(this.state.sortBy);
-  }
-
-  // handleTermChange(e) {
-  //   this.setState({});
-  //   this.setState({
-  //     term: e.target.value,
-  //   });
-  // }
-  // handleLocationChange(e) {
-  //   this.setState({});
-  //   this.setState({
-  //     location: e.target.value,
-  //   });
-  // }
-  
-
-  handleSearch(e) {
+  const getSortByClass = (sortByOption) => {
+    return sortBy === sortByOption ? "active" : "";
+  };
+  const handleSortByChange = (e) => {
+    console.log("111", e.target.dataset.value);
+    setSortBy(e.target.dataset.value);
+  };
+  const handleSearch = (e) => {
     e.preventDefault();
-    this.props.setTerm(this.businessTypeInput.current.value);
-    this.props.setLocation(this.businessLocationInput.current.value);
-    this.props.setSortBy(this.state.sortBy);
+    setTerm(businessTypeInput.current.value);
+    setLocation(businessLocationInput.current.value);
+  };
 
-    // this.props.searchYelp(
-    //   this.state.term,
-    //   this.state.location,
-    //   this.state.sortBy
-    // );
-  }
+  useEffect(() => {
+    console.log("222", sortBy);
+    if (initialRender.current) {
+      initialRender.current = false;
+      return;
+    }
+    if (term !== "" && location !== "") {
+      getPlaces();
+    } else {
+      setError("Please type in search terms and try again");
+    }
+  }, [term, location, sortBy]);
 
-  // рендерит панель вариантов фильтра, при нажатии на вариант он запишется в state, выбранному варианту назначится класс для оформления
-  renderSortByOptions() {
-    return Object.keys(this.sortByOptions).map((sortByOption) => {
-      let sortByOptionValue = this.sortByOptions[sortByOption];
+  const renderSortByOptions = () => {
+    return Object.keys(sortByOptions).map((sortByOption) => {
+      let sortByOptionValue = sortByOptions[sortByOption];
       return (
         <li
-          className={this.getSortByClass(sortByOptionValue)}
+          className={getSortByClass(sortByOptionValue)}
           key={sortByOptionValue}
-          onClick={this.handleSortByChange.bind(this, sortByOptionValue)}
+          data-value={sortByOptionValue}
+          onClick={handleSortByChange}
         >
           {sortByOption}
         </li>
       );
     });
-  }
+  };
 
-  render() {
-    return (
-      <div className="SearchBar">
-        <div className="SearchBar-sort-options">
-          <ul>{this.renderSortByOptions(this.sortByOptions)}</ul>
-        </div>
-        <div className="SearchBar-fields">
-          <input
-            // onChange={this.handleTermChange}
-            ref={this.businessTypeInput}
-            placeholder="Search Businesses"
-          />
-          <input 
-            // onChange={this.handleLocationChange} 
-            ref={this.businessLocationInput}
-            placeholder="Where?" 
-          />
-        </div>
-        <div className="SearchBar-submit">
-          <div onClick={this.handleSearch}>Let's Go</div>
-        </div>
+  return (
+    <div className="SearchBar">
+      <div className="SearchBar-sort-options">
+        <ul>{renderSortByOptions(sortByOptions)}</ul>
       </div>
-    );
-  }
+      <div className="SearchBar-fields">
+        <input
+          // onChange={handleTermChange}
+          ref={businessTypeInput}
+          // placeholder="Search Businesses"
+          placeholder={term !== "" ? term : "Search Businesses"}
+        />
+        <input
+          // onChange={handleLocationChange}
+          ref={businessLocationInput}
+          placeholder={location !== "" ? location : "Where?"}
+        />
+      </div>
+      <div className="SearchBar-submit">
+        <div onClick={handleSearch}>Let's Go</div>
+      </div>
+    </div>
+  );
 }
+// class SearchBar extends React.Component {
 
-export default SearchBar;
+//   // handleTermChange(e) {
+//   //   setState({});
+//   //   setState({
+//   //     term: e.target.value,
+//   //   });
+//   // }
+//   // handleLocationChange(e) {
+//   //   setState({});
+//   //   this.setState({
+//   //     location: e.target.value,
+//   //   });
+//   // }
+
+//   render() {
+//     return (
+//       <div className="SearchBar">
+//         <div className="SearchBar-sort-options">
+//           <ul>{this.renderSortByOptions(this.sortByOptions)}</ul>
+//         </div>
+//         <div className="SearchBar-fields">
+//           <input
+//             // onChange={this.handleTermChange}
+//             ref={this.businessTypeInput}
+//             placeholder="Search Businesses"
+//           />
+//           <input
+//             // onChange={this.handleLocationChange}
+//             ref={this.businessLocationInput}
+//             placeholder="Where?"
+//           />
+//         </div>
+//         <div className="SearchBar-submit">
+//           <div onClick={this.handleSearch}>Let's Go</div>
+//         </div>
+//       </div>
+//     );
+//   }
+// }
