@@ -27,28 +27,16 @@ app.get("/searchYelp", cors(corsOptions), async (req, res) => {
   });
   const jsonResponse = await response.json();
   res.json(jsonResponse);
-
-  // console.log('response', response);
-  // if (response.ok) {
-  //   const jsonResponse = await response.json();
-  //   res.json(jsonResponse);
-  // } else {
-  //   res.json('Something went wrong');
-  //   // res.json(jsonResponse);
-  // }
-  
 });
 
 app.get("/searchBusiness", cors(corsOptions), async (req, res) => {
   let id = req.query.id;
-  console.log('id', id);
   const requestEndpoint = `https://api.yelp.com/v3/businesses/${id}`;
 
   const response = await fetch(requestEndpoint, {
     headers: { Authorization: `Bearer ${apiKey}` },
   });
   const jsonResponse = await response.json();
-  console.log('first', jsonResponse);
   res.json(jsonResponse);
 });
 

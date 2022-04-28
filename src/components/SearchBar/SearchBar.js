@@ -30,26 +30,30 @@ export default function SearchBar() {
     return sortBy === sortByOption ? "active" : "";
   };
   const handleSortByChange = (e) => {
-    console.log("111", e.target.dataset.value);
     setSortBy(e.target.dataset.value);
   };
   const handleSearch = (e) => {
     e.preventDefault();
-    setTerm(businessTypeInput.current.value);
-    setLocation(businessLocationInput.current.value);
+    if (businessTypeInput.current.value !== "" && businessLocationInput.current.value !== "") {
+      setTerm(businessTypeInput.current.value);
+      setLocation(businessLocationInput.current.value);
+    } else {
+      setError("Please type in search terms and try again");
+    }
+    
   };
 
   useEffect(() => {
-    console.log("222", sortBy);
     if (initialRender.current) {
       initialRender.current = false;
       return;
     }
-    if (term !== "" && location !== "") {
-      getPlaces();
-    } else {
-      setError("Please type in search terms and try again");
-    }
+    // if (term !== "" && location !== "") {
+    //   getPlaces();
+    // } else {
+      
+    // }
+    getPlaces();
   }, [term, location, sortBy]);
 
   const renderSortByOptions = () => {
@@ -70,25 +74,27 @@ export default function SearchBar() {
 
   return (
     <div className="SearchBar">
-      <div className="SearchBar-sort-options">
-        <ul>{renderSortByOptions(sortByOptions)}</ul>
-      </div>
-      <div className="SearchBar-fields">
-        <input
-          // onChange={handleTermChange}
-          ref={businessTypeInput}
-          // placeholder="Search Businesses"
-          placeholder={term !== "" ? term : "Search Businesses"}
-        />
-        <input
-          // onChange={handleLocationChange}
-          ref={businessLocationInput}
-          placeholder={location !== "" ? location : "Where?"}
-        />
-      </div>
-      <div className="SearchBar-submit">
-        <div onClick={handleSearch}>Let's Go</div>
-      </div>
+      <form onSubmit={handleSearch}>
+        <div className="SearchBar-sort-options">
+          <ul>{renderSortByOptions(sortByOptions)}</ul>
+        </div>
+        <div className="SearchBar-fields">
+          <input
+            // onChange={handleTermChange}
+            ref={businessTypeInput}
+            // placeholder="Search Businesses"
+            placeholder="Search Businesses"
+          />
+          <input
+            // onChange={handleLocationChange}
+            ref={businessLocationInput}
+            placeholder="Where?"
+          />
+        </div>
+        <div className="SearchBar-submit">
+          <button type="submit" >Let's Go</button>
+        </div>
+      </form>
     </div>
   );
 }

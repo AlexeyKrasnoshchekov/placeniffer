@@ -7,15 +7,72 @@
 }
 .businesspage-cart {
     display: flex; 
-    flex-direction: column;
 }
-.businesspage-heading {
+
+.businesspage-cart-left {
+    width: 55%;
+    height: 70vh;
+
+}
+.businesspage-cart-right {
+    width: 40%; 
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.businesspage-cart-left {
+    margin-right: 5%; 
+}
+/* .businesspage-heading {
     font-size: 24px;
     display: flex; 
-}
+} */
 .businesspage-cats {
     display: flex; 
 }
 .businesspage-rating-container {
     display: flex; 
+    font-size: 18px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.businesspage-devider {
+    width: 5rem;
+    height: 0.1rem;
+    background-color: black;
+    margin-bottom: 1rem;
+}
+.businesspage-back-button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    padding: 1rem 0;
+}
+.businesspage-back-button:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+.businesspage-heading {
+    font-size: 32px;
+    font-weight: semibold;
+    margin-bottom: 1rem;
+}
+.businesspage-text {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+}
+.text-heading {
+    font-weight: 600;
+}
+.businesspage-map {
+    height: 50%;
+}
+.businesspage-hours {
+    display: flex;
+    margin-bottom: 0.5rem;
+    font-size: 18px;
+    margin-right: 1rem;
+    font-weight: 600;
 }
