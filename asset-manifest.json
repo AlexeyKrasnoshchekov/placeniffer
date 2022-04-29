@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/AlexeyKrasnoshchekov/placeniffer/static/css/main.935b052c.chunk.css",
-    "main.js": "/AlexeyKrasnoshchekov/placeniffer/static/js/main.19938574.chunk.js",
-    "main.js.map": "/AlexeyKrasnoshchekov/placeniffer/static/js/main.19938574.chunk.js.map",
-    "runtime-main.js": "/AlexeyKrasnoshchekov/placeniffer/static/js/runtime-main.93d2328c.js",
-    "runtime-main.js.map": "/AlexeyKrasnoshchekov/placeniffer/static/js/runtime-main.93d2328c.js.map",
-    "static/css/2.6b560088.chunk.css": "/AlexeyKrasnoshchekov/placeniffer/static/css/2.6b560088.chunk.css",
-    "static/js/2.185cd245.chunk.js": "/AlexeyKrasnoshchekov/placeniffer/static/js/2.185cd245.chunk.js",
-    "static/js/2.185cd245.chunk.js.map": "/AlexeyKrasnoshchekov/placeniffer/static/js/2.185cd245.chunk.js.map",
-    "index.html": "/AlexeyKrasnoshchekov/placeniffer/index.html",
-    "static/css/2.6b560088.chunk.css.map": "/AlexeyKrasnoshchekov/placeniffer/static/css/2.6b560088.chunk.css.map",
-    "static/css/main.935b052c.chunk.css.map": "/AlexeyKrasnoshchekov/placeniffer/static/css/main.935b052c.chunk.css.map",
-    "static/js/2.185cd245.chunk.js.LICENSE.txt": "/AlexeyKrasnoshchekov/placeniffer/static/js/2.185cd245.chunk.js.LICENSE.txt",
-    "static/media/SearchBar.css": "/AlexeyKrasnoshchekov/placeniffer/static/media/background_search_mobile.9e607f23.webp"
+    "main.css": "/placeniffer/static/css/main.8fb97bbd.chunk.css",
+    "main.js": "/placeniffer/static/js/main.19938574.chunk.js",
+    "main.js.map": "/placeniffer/static/js/main.19938574.chunk.js.map",
+    "runtime-main.js": "/placeniffer/static/js/runtime-main.b4a4b2e6.js",
+    "runtime-main.js.map": "/placeniffer/static/js/runtime-main.b4a4b2e6.js.map",
+    "static/css/2.6b560088.chunk.css": "/placeniffer/static/css/2.6b560088.chunk.css",
+    "static/js/2.185cd245.chunk.js": "/placeniffer/static/js/2.185cd245.chunk.js",
+    "static/js/2.185cd245.chunk.js.map": "/placeniffer/static/js/2.185cd245.chunk.js.map",
+    "index.html": "/placeniffer/index.html",
+    "static/css/2.6b560088.chunk.css.map": "/placeniffer/static/css/2.6b560088.chunk.css.map",
+    "static/css/main.8fb97bbd.chunk.css.map": "/placeniffer/static/css/main.8fb97bbd.chunk.css.map",
+    "static/js/2.185cd245.chunk.js.LICENSE.txt": "/placeniffer/static/js/2.185cd245.chunk.js.LICENSE.txt",
+    "static/media/SearchBar.css": "/placeniffer/static/media/background_search_mobile.9e607f23.webp"
   },
   "entrypoints": [
-    "static/js/runtime-main.93d2328c.js",
+    "static/js/runtime-main.b4a4b2e6.js",
     "static/css/2.6b560088.chunk.css",
     "static/js/2.185cd245.chunk.js",
-    "static/css/main.935b052c.chunk.css",
+    "static/css/main.8fb97bbd.chunk.css",
     "static/js/main.19938574.chunk.js"
   ]
 }
