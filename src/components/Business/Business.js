@@ -16,7 +16,7 @@ export default function Business({ place }) {
           justifyContent: "space-between",
         }}
       >
-        <Link className="business-name" to={`/business/${place.id}`}>
+        <Link className="business-name" to={`/placeniffer/business/${place.id}`}>
           <h2>{place.name}</h2>
         </Link>
         <div style={{ display: "flex", color: "green" }}>
