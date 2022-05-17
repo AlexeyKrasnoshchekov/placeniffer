@@ -10,10 +10,10 @@ function App() {
     <State>
       <Router>
         <Switch>
-          <Route path="/business/:id">
+          <Route path="/placeniffer/business/:id">
             <BusinessPage />
           </Route>
-          <Route path="/">
+          <Route path="/placeniffer">
             <Home />
           </Route>
         </Switch>
