@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useRef } from "react";
-import { createRef } from "react/cjs/react.production.min";
+import { createRef, forwardRef } from "react/cjs/react.production.min";
 import "./SearchBar.css";
 import context from "../../context/context";
+import PlacesAutocompleteInput from "./PlacesAutocomplete";
 
 export default function SearchBar() {
   // const [sortBy, setSortBy] = useState("best_match");
@@ -16,6 +17,10 @@ export default function SearchBar() {
     setError,
     getPlaces,
   } = useContext(context);
+
+  // const PlacesAutocompleteInputWithRef = forwardRef((props, ref) => (
+  //   <PlacesAutocompleteInput ref={ref} />
+  // ));
 
   let businessTypeInput = createRef();
   let businessLocationInput = createRef();
@@ -36,7 +41,7 @@ export default function SearchBar() {
     e.preventDefault();
     if (businessTypeInput.current.value !== "" && businessLocationInput.current.value !== "") {
       setTerm(businessTypeInput.current.value);
-      setLocation(businessLocationInput.current.value);
+      setLocation(businessLocationInput.current.value.split(',')[0]);
     } else {
       setError("Please type in search terms and try again");
     }
@@ -53,6 +58,8 @@ export default function SearchBar() {
     // } else {
       
     // }
+    console.log('term', term)
+    console.log('location', location)
     getPlaces();
   }, [term, location, sortBy]);
 
@@ -85,11 +92,12 @@ export default function SearchBar() {
             // placeholder="Search Businesses"
             placeholder="Search Businesses"
           />
-          <input
+          {/* <input
             // onChange={handleLocationChange}
             ref={businessLocationInput}
             placeholder="Where?"
-          />
+          /> */}
+          <PlacesAutocompleteInput ref={businessLocationInput}/>
         </div>
         <div className="SearchBar-submit">
           <button type="submit" >Let's Go</button>
