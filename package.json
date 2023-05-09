@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@react-google-maps/api": "^2.10.0",
+    "@react-google-maps/api": "^2.18.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -16,7 +16,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router": "^6.3.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^1.1.2",
     "whatwg-fetch": "^3.6.2"
   },

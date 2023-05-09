@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import PlacesAutocomplete from "react-places-autocomplete";
-import { forwardRef } from "react/cjs/react.production.min";
+
 
 // export default function PlacesAutocompleteInput() {
 const PlacesAutocompleteInput = forwardRef((props, ref) => {

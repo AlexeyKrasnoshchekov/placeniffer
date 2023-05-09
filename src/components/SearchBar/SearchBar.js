@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useRef } from "react";
-import { createRef, forwardRef } from "react/cjs/react.production.min";
+import React, { createRef, useContext, useEffect, useRef } from "react";
+// import { createRef, forwardRef } from "react/cjs/react.production.min";
 import "./SearchBar.css";
 import context from "../../context/context";
 import PlacesAutocompleteInput from "./PlacesAutocomplete";

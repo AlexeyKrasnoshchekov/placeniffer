@@ -30,7 +30,8 @@ const State = (props) => {
   // Get Messages
   const getPlaces = async () => {
     const offset = state.page * state.page_size;
-    const url = `https://placeniffer.herokuapp.com/searchYelp/?term=${state.term}&location=${state.location}&sortby=${state.sortBy}&limit=${state.page_size}&offset=${offset}`;
+    // const url = `https://placeniffer.herokuapp.com/searchYelp/?term=${state.term}&location=${state.location}&sortby=${state.sortBy}&limit=${state.page_size}&offset=${offset}`;
+    const url = `https://placesniffer-server.vercel.app/searchYelp/?term=${state.term}&location=${state.location}&sortby=${state.sortBy}&limit=${state.page_size}&offset=${offset}`;
     console.log('url', url)
     let response = await fetch(url, { mode: "cors" });
 
@@ -56,7 +57,8 @@ const State = (props) => {
 
   // Get Message
   const getPlace = async (id) => {
-    const url = `https://placeniffer.herokuapp.com/searchBusiness/?id=${id}`;
+    // const url = `https://placeniffer.herokuapp.com/searchBusiness/?id=${id}`;
+    const url = `https://placesniffer-server.vercel.app/searchBusiness/?id=${id}`;
 
     let response = await fetch(url, { mode: "cors" });
     let jsonResponse = await response.json();

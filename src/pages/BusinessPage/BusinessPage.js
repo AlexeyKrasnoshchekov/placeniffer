@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import CarouselComponent from "../../components/Carousel/Carousel";
 import "./BusinessPage.css";
@@ -10,26 +10,26 @@ export default function BusinessPage() {
   const { place, getPlace } = useContext(context);
 
   // const [business, setBusiness] = useState([]);
-  const [gurl, setGurl] = useState("");
+  // const [gurl, setGurl] = useState("");
 
-  const gapi = "AIzaSyAJlieS2MnisIz4mlnFFpvpqfwry-T6bmM";
+  // const gapi = "AIzaSyAJlieS2MnisIz4mlnFFpvpqfwry-T6bmM";
 
   useEffect(() => {
     getPlace(id);
   }, []);
 
-  useEffect(() => {
-    if (place) {
-      if (place.location) {
-        if (place.location.display_address.length !== 0) {
-          const address = place.location.display_address.join();
-          setGurl(
-            `https://www.google.com/maps/embed/v1/place?key=${gapi}&q=${address}`
-          );
-        }
-      }
-    }
-  }, [place]);
+  // useEffect(() => {
+  //   if (place) {
+  //     if (place.location) {
+  //       if (place.location.display_address.length !== 0) {
+  //         const address = place.location.display_address.join();
+  //         setGurl(
+  //           `https://www.google.com/maps/embed/v1/place?key=${gapi}&q=${address}`
+  //         );
+  //       }
+  //     }
+  //   }
+  // }, [place]);
 
   const routerHistory = useHistory();
   
@@ -134,13 +134,13 @@ export default function BusinessPage() {
                   {place.location.display_address.join(", ")}
                 </div>
               </div>
-              <iframe
+              {/* <iframe
                 title="map"
                 width="100%"
                 height="50%"
                 frameBorder="0"
                 src={gurl}
-              ></iframe>
+              ></iframe> */}
             </div>
           </div>
         </div>
