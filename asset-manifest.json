@@ -1,24 +1,15 @@
 {
   "files": {
-    "main.css": "/placeniffer/static/css/main.5018172a.chunk.css",
-    "main.js": "/placeniffer/static/js/main.c5f137ed.chunk.js",
-    "main.js.map": "/placeniffer/static/js/main.c5f137ed.chunk.js.map",
-    "runtime-main.js": "/placeniffer/static/js/runtime-main.b4a4b2e6.js",
-    "runtime-main.js.map": "/placeniffer/static/js/runtime-main.b4a4b2e6.js.map",
-    "static/css/2.6b560088.chunk.css": "/placeniffer/static/css/2.6b560088.chunk.css",
-    "static/js/2.0a80bd56.chunk.js": "/placeniffer/static/js/2.0a80bd56.chunk.js",
-    "static/js/2.0a80bd56.chunk.js.map": "/placeniffer/static/js/2.0a80bd56.chunk.js.map",
+    "main.css": "/placeniffer/static/css/main.0265e45f.css",
+    "main.js": "/placeniffer/static/js/main.f569d439.js",
+    "static/media/background_search_desktop.webp": "/placeniffer/static/media/background_search_desktop.181e1bc54f5e85f8ddf0.webp",
+    "static/media/background_search_mobile.webp": "/placeniffer/static/media/background_search_mobile.9e607f23b6cbd64d75cb.webp",
     "index.html": "/placeniffer/index.html",
-    "static/css/2.6b560088.chunk.css.map": "/placeniffer/static/css/2.6b560088.chunk.css.map",
-    "static/css/main.5018172a.chunk.css.map": "/placeniffer/static/css/main.5018172a.chunk.css.map",
-    "static/js/2.0a80bd56.chunk.js.LICENSE.txt": "/placeniffer/static/js/2.0a80bd56.chunk.js.LICENSE.txt",
-    "static/media/SearchBar.css": "/placeniffer/static/media/background_search_mobile.9e607f23.webp"
+    "main.0265e45f.css.map": "/placeniffer/static/css/main.0265e45f.css.map",
+    "main.f569d439.js.map": "/placeniffer/static/js/main.f569d439.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.b4a4b2e6.js",
-    "static/css/2.6b560088.chunk.css",
-    "static/js/2.0a80bd56.chunk.js",
-    "static/css/main.5018172a.chunk.css",
-    "static/js/main.c5f137ed.chunk.js"
+    "static/css/main.0265e45f.css",
+    "static/js/main.f569d439.js"
   ]
 }
