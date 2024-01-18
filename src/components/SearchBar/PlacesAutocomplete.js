@@ -1,11 +1,13 @@
 import React, { forwardRef, useState } from "react";
 import PlacesAutocomplete from "react-places-autocomplete";
-
+// import PlacesPicker from '@tasiodev/react-places-autocomplete'
 
 // export default function PlacesAutocompleteInput() {
 const PlacesAutocompleteInput = forwardRef((props, ref) => {
   const [address, setAddress] = useState("");
-
+  // const [value, setValue] = useState(null);
+  // const gapi = "AIzaSyAJlieS2MnisIz4mlnFFpvpqfwry-T6bmM";
+  // console.log('ref111',ref)
   return (
     <PlacesAutocomplete
       value={address}
@@ -48,6 +50,12 @@ const PlacesAutocompleteInput = forwardRef((props, ref) => {
         </div>
       )}
     </PlacesAutocomplete>
+
+    // <PlacesPicker
+    //       gMapsKey={gapi}
+    //       onChange={setValue}
+    //       placeholder='Search Places ...'
+    //     />
   );
 });
 
