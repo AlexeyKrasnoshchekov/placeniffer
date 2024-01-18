@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/placeniffer/static/css/main.0265e45f.css",
-    "main.js": "/placeniffer/static/js/main.585e36d4.js",
+    "main.js": "/placeniffer/static/js/main.63584e0a.js",
     "static/media/background_search_desktop.webp": "/placeniffer/static/media/background_search_desktop.181e1bc54f5e85f8ddf0.webp",
     "static/media/background_search_mobile.webp": "/placeniffer/static/media/background_search_mobile.9e607f23b6cbd64d75cb.webp",
     "index.html": "/placeniffer/index.html",
     "main.0265e45f.css.map": "/placeniffer/static/css/main.0265e45f.css.map",
-    "main.585e36d4.js.map": "/placeniffer/static/js/main.585e36d4.js.map"
+    "main.63584e0a.js.map": "/placeniffer/static/js/main.63584e0a.js.map"
   },
   "entrypoints": [
     "static/css/main.0265e45f.css",
-    "static/js/main.585e36d4.js"
+    "static/js/main.63584e0a.js"
   ]
 }
